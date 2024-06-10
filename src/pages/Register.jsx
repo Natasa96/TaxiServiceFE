@@ -92,7 +92,7 @@ const Register = () => {
           </FormControl>
 
           <FormControl>
-            <FormLabel htmlFor="email"></FormLabel>
+            <FormLabel htmlFor="email">Email: </FormLabel>
             <Input
               id="email"
               type="email"
@@ -111,14 +111,14 @@ const Register = () => {
             </FormErrorMessage>
           </FormControl>
 
-          <FormLabel htmlFor="name"></FormLabel>
+          <FormLabel htmlFor="name">First name:</FormLabel>
           <Input id="name" placeholder="Name" {...register("name")} />
 
-          <FormLabel htmlFor="surname"></FormLabel>
+          <FormLabel htmlFor="surname">Last name:</FormLabel>
           <Input id="surname" placeholder="Surname" {...register("surname")} />
 
           <FormControl>
-            <FormLabel htmlFor="birthday"></FormLabel>
+            <FormLabel htmlFor="birthday">Birthday:</FormLabel>
             <Input
               id="birthday"
               type="date"

@@ -1,9 +1,14 @@
+import { Text } from "@chakra-ui/react";
 import Layout from "../components/Layout";
 
 const Home = () => {
   return (
     <Layout>
-      <h1 color='red'>Hello from Home Page!</h1>
+      <Text whiteSpace="pre-line" fontSize="30px" color="black">
+        This is your Home page, congrats on loging in! {"\n"}
+        You can now start using our Taxi service for easier navigation around
+        towns! {"\n"}Good luck!
+      </Text>
     </Layout>
   );
 };

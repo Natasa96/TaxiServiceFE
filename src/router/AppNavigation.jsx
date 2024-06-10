@@ -6,7 +6,7 @@ import Register from "../pages/Register";
 import Profile from "../pages/Profile";
 import Rides from "../pages/Rides";
 import Drivers from "../pages/Drivers";
-import ProtectedRoute from "./ProtectedRoutes";
+//import ProtectedRoute from "./ProtectedRoutes";
 import { Box } from "@chakra-ui/react";
 import CreateRide from "../pages/CreateRide";
 import Landing from "../pages/Landing";
@@ -31,14 +31,7 @@ function AppNavigation() {
           <Route path="/register" element={<Register />} />
           <Route path="/rides" element={<Rides />} />
           <Route path="/history" element={<History />} />
-          <Route
-            path="/drivers"
-            element={
-              <ProtectedRoute>
-                <Drivers />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/drivers" element={<Drivers />} />
           <Route path="/create-ride" element={<CreateRide />} />
         </Routes>
         <Outlet />

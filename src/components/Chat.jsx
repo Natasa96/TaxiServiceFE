@@ -63,7 +63,7 @@ const Chat = ({ userId }) => {
       {!isChatOpen && (
         <Circle
           size="60px"
-          bg="blue.500"
+          bg="teal.500"
           color="white"
           mb={2}
           cursor="pointer"
@@ -75,7 +75,7 @@ const Chat = ({ userId }) => {
       {isChatOpen && (
         <Box maxW="300px" boxShadow="lg" borderRadius="md" bg="white">
           <Flex
-            bg="blue.500"
+            bg="teal.500"
             color="white"
             p={2}
             justifyContent="space-between"

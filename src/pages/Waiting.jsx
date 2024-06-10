@@ -27,7 +27,7 @@ const Waiting = () => {
 
   const { mutateAsync: startRideMutation } = useApiMutation(
     "put",
-    "start-ride",
+    "/start-ride",
     {
       onSuccess: (data) => {
         activeRideId(data.id);
@@ -77,7 +77,6 @@ const Waiting = () => {
     }
   }, [waitingTime, rideTime]);
 
-  //Dodati da kada istekne vreme krene da tece rideTime / da li valja uslov u elst if
   useEffect(() => {
     if (data?.ride) {
       //proveri dal ride ima waiting time i nema ride duration
@@ -113,7 +112,7 @@ const Waiting = () => {
         pt={50}
         gap={10}
         height="100vh"
-        bgGradient="linear(to-r, blue.500, purple.500)"
+        bgGradient="linear(to-r, yellow.200, red.200)"
         color="white"
       >
         {waitingTime > 0 && data?.ride?.rideStatus !== 1 && (
@@ -166,12 +165,16 @@ const Waiting = () => {
         {data?.ride?.driver && <Chat userId={user.id} />}
         {USER_ROLES[user?.role] === "Driver" && (
           <HStack>
-            <Button size="lg" colorScheme="green" onClick={startRide}>
-              Start Ride
-            </Button>
-            <Button size="lg" colorScheme="red" onClick={finishRide}>
-              End Ride
-            </Button>
+            {waitingTime && (
+              <Button size="lg" colorScheme="green" onClick={startRide}>
+                Start Ride
+              </Button>
+            )}
+            {rideTime && (
+              <Button size="lg" colorScheme="red" onClick={finishRide}>
+                End Ride
+              </Button>
+            )}
           </HStack>
         )}
       </Box>

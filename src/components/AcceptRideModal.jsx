@@ -18,13 +18,13 @@ function AcceptRideModal({ onClick, isOpen, onClose }) {
         <ModalContent>
           <ModalHeader>Accept new ride</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>Hello!</ModalBody>
+          <ModalBody>Are you sure you want to accept new ride?</ModalBody>
 
           <ModalFooter>
-            <Button variant="ghost" mr={3} onClick={onClose}>
+            <Button variant="outline" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button colorScheme="red" onClick={onClick}>
+            <Button bg="orange.100" variant="solid" onClick={onClick}>
               Accept
             </Button>
           </ModalFooter>

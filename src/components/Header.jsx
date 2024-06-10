@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <Box bg="teal.500" color="white" px={4} py={3}>
       <Flex justify="space-between" align="center">
-        <Heading size="lg">My App</Heading>
+        <Heading size="lg">Taxi Service App</Heading>
         <Button onClick={handleLogout} colorScheme="teal" variant="outline">
           Logout
         </Button>

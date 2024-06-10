@@ -21,7 +21,7 @@ const DriverList = ({ drivers, title }) => {
   };
 
   const handleBlockDriver = async (driver) => {
-    const responseData = await blockMutation({ driverId: driver.id }); // {tvoj response od BE single driver}
+    const responseData = await blockMutation({ driverId: driver.id }); // {response od BE single driver}
     const updateDrivers = data.drivers.map((driver) => {
       if (driver.id === responseData.driverId) {
         return { ...driver, verificationState: responseData.status };
